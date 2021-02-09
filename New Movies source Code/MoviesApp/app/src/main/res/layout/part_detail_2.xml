@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/details_part2_guideline1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="40dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/detail_card_view_poster"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="18dp"
+        app:cardElevation="16dp"
+        app:layout_constraintDimensionRatio="w,2:3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/detail2_iv_poster"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/backgrounds/scenic" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/details_part2_movie_name_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/black_ops_one"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="Movie Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/detail_card_view_poster"
+        app:layout_constraintTop_toBottomOf="@id/details_part2_guideline1" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/details_part2_chip_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/details_part2_movie_name_tv"
+        app:layout_constraintTop_toBottomOf="@id/details_part2_movie_name_tv">
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <View
+        android:id="@+id/details_part2_divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="10dp"
+        android:background="?attr/actionBarDivider"
+        app:layout_constraintTop_toBottomOf="@id/detail_card_view_poster" />
+
+    <TextView
+        android:id="@+id/details_part2_release_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:drawableStart="@drawable/ic_time"
+        android:drawablePadding="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_part2_divider_1"
+        tools:text="13-2-2020" />
+
+    <TextView
+        android:id="@+id/details_part2_release_date_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Release Date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toEndOf="@id/details_part2_release_date_tv"
+        app:layout_constraintStart_toStartOf="@id/details_part2_release_date_tv"
+        app:layout_constraintTop_toBottomOf="@id/details_part2_release_date_tv"
+        tools:text="Release date" />
+
+    <TextView
+        android:id="@+id/details_part2_vote_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:drawableEnd="@drawable/ic_star"
+        android:drawablePadding="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_part2_divider_1"
+        tools:text="3.5" />
+
+    <TextView
+        android:id="@+id/details_part2_vote_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toEndOf="@id/details_part2_vote_tv"
+        app:layout_constraintStart_toStartOf="@id/details_part2_vote_tv"
+        app:layout_constraintTop_toBottomOf="@id/details_part2_vote_tv"
+        tools:text="2587" />
+
+    <TextView
+        android:id="@+id/details_part2_language_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:drawableStart="@drawable/ic_language"
+        android:drawablePadding="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toStartOf="@id/details_part2_release_date_tv"
+        app:layout_constraintStart_toEndOf="@id/details_part2_vote_tv"
+        app:layout_constraintTop_toBottomOf="@id/details_part2_divider_1"
+        tools:text="US" />
+
+    <TextView
+        android:id="@+id/details_part2_language_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Language"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toEndOf="@id/details_part2_language_tv"
+        app:layout_constraintStart_toStartOf="@id/details_part2_language_tv"
+        app:layout_constraintTop_toBottomOf="@id/details_part2_language_tv"
+        tools:text="Language" />
+
+    <View
+        android:id="@+id/details_part2_divider_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="10dp"
+        android:background="?attr/actionBarDivider"
+        app:layout_constraintTop_toBottomOf="@id/details_part2_language_tv2" />
+
+    <TextView
+        android:id="@+id/details_part2_overview_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Overview"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_part2_divider_2"
+        tools:text="OverView" />
+
+    <TextView
+        android:id="@+id/details_part2_overview_tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_part2_overview_tv" />
+
+    <View
+        android:id="@+id/details_part2_divider_3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="10dp"
+        android:background="?attr/actionBarDivider"
+        app:layout_constraintTop_toBottomOf="@id/details_part2_overview_tv2" />
+
+    <TextView
+        android:id="@+id/details_part2_actors_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Actors"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_part2_divider_3"
+        tools:text="Actors" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/details_part2_actors_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_part2_actors_tv"
+        tools:listitem="@layout/actors_recycler_design" />
+
+    <TextView
+        android:id="@+id/details_part2_reviews_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Reviews"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_part2_actors_recycler_view"
+        tools:text="Reviews" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/details_part2_reviews_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clipChildren="true"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_part2_reviews_tv"
+        tools:listitem="@layout/review_recycler_design" />
+</androidx.constraintlayout.widget.ConstraintLayout>
